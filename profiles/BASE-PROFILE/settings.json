@@ -19,7 +19,7 @@
   "editor.detectIndentation": false,
   "editor.guides.bracketPairs": true,
   "editor.guides.indentation": true,
-  "editor.wordWrapColumn": 72,
+  "editor.wordWrapColumn": 120,
   "editor.rulers": [120],
   "editor.autoIndent": "advanced",
 
@@ -79,7 +79,6 @@
   "[markdown]": {
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
-    "editor.detectIndentation": false,
     "files.trimTrailingWhitespace": false
   },
   "[python]": {
@@ -102,12 +101,6 @@
     "editor.insertSpaces": true,
     "files.trimTrailingWhitespace": false
   },
-
-  // -------------------------------
-  // YAML specific settings
-  // -------------------------------
-  "yaml.format.printWidth": 120,
-  "yaml.format.singleQuote": true,
 
   // -------------------------------
   // Workbench / UI
@@ -133,10 +126,7 @@
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.smoothScrolling": true,
   // macOS keys retained for cross-platform usage (no-op on Linux)
-  "terminal.integrated.shell.osx": "/bin/zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.external.linuxExec": "alacritty",
-  "terminal.external.osxExec": "Alacritty.app",
 
   // -------------------------------
   // Git & SCM
@@ -151,23 +141,19 @@
   // Move extension-specific keys to your profile for the extension if you prefer.
   // -------------------------------
 
-  // ESLint (extension)
-  "eslint.format.enable": true,
-  "eslint.alwaysShowStatus": true,
-
   // GitHub Copilot (extension)
-  "github.copilot.editor.enableAutoCompletions": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": { "*": true },
   "github.copilot.nextEditSuggestions.enabled": true,
 
   // GitLens (extension)
   "gitlens.graph.layout": "editor",
   "gitlens.graph.dimMergeCommits": true,
   "gitlens.graph.minimap.enabled": false,
-  "gitlens.worktrees.defaultLocation": "/Users/jfairbanks/code",
+  "gitlens.worktrees.defaultLocation": "~/code",
   "gitlens.views.worktrees.files.layout": "list",
   "gitlens.views.worktrees.pullRequests.enabled": false,
   "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 
   // Markdown / preview / shortcuts (extensions)
   "markdownlint.ignore": [".gitignore", ".claspignore"],
