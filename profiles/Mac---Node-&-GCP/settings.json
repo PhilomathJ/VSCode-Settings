@@ -62,7 +62,7 @@
             ]
         }
     },
-    "workbench.colorTheme": "Default High Contrast Light",
+    "workbench.colorTheme": "Material Dark",
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.iconTheme": "vscode-icons",
     "redhat.telemetry.enabled": true,
