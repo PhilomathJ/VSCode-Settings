@@ -1,0 +1,264 @@
+// MAC NODE & GCP PRROFILE SETTINGS
+{
+    "highlight.regexes": {
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#ffcc00",
+                    "backgroundColor": "#ffcc00",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#ffcc00",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#cc0000",
+                    "backgroundColor": "#cc0000",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#cc0000",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#00ccff",
+                    "backgroundColor": "#00ccff",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#00ccff",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#cc00cc",
+                    "backgroundColor": "#cc00cc",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#cc00cc",
+                    "color": "#1f1f1f"
+                }
+            ]
+        }
+    },
+    "workbench.colorTheme": "Default High Contrast Light",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.iconTheme": "vscode-icons",
+    "redhat.telemetry.enabled": true,
+    "ansible.executionEnvironment.enabled": true,
+    "vsicons.dontShowNewVersionMessage": true,
+
+    //////////////
+    // VS Notes Extension
+    // https://marketplace.visualstudio.com/items?itemName=patricklee.vsnotes
+    //////////////
+    // Path to directory to save notes. Use ~/ to denote a relative path from home folder.
+    "vsnotes.defaultNotePath": "/Users/jfairbanks/Documents/notes",
+    // Default note title. Utilizes tokens set in vsnotes.tokens.
+    "vsnotes.defaultNoteTitle": "{dt}-{title}.{ext}",
+    // List of additional note title tokens to choose from. If supplied, a picker will be shown when creating a new note.
+    "vsnotes.additionalNoteTitles": [],
+    // Tokens used to replace text in file name.
+    "vsnotes.tokens": [
+        {
+            "type": "datetime",
+            "token": "{dt}",
+            "format": "YYYYMMDD",
+            "description": "Insert formatted datetime."
+        },
+        {
+            "type": "title",
+            "token": "{title}",
+            "description": "Insert note title from input box.",
+            "format": "Untitled"
+        },
+        {
+            "type": "extension",
+            "token": "{ext}",
+            "description": "Insert file vsnotes.",
+            "format": "md"
+        }
+    ],
+    // The default commit message used if none is provided with the Commit and Push command.
+    "vsnotes.commitPushDefaultCommitMessage": "VS Notes Commit and Push",
+    // Shell command to execute in the note directory when the Commit and Push command is executed. The {msg} token will be replaced with the contents of an input box shown or, if empty, the default commit message.
+    "vsnotes.commitPushShellCommand": "git add -A && git commit -m \"{msg}\" && git push",
+    // Default title for new notes.
+    "vsnotes.defaultNoteName": "daily",
+    // Default vscode snippet to execute after creating a note. Set both langId and name to null to disable.
+    "vsnotes.defaultSnippet": {
+        "langId": "markdown",
+        "name": "vsnote_template_mydefault"
+    },
+    // Regular expressions for file names to ignore when parsing documents in note folder.
+    "vsnotes.ignorePatterns": ["^\\."],
+    // Number of recent files to show when running command `List Notes`.
+    "vsnotes.listRecentLimit": 15,
+    // Automatically convert blank spaces in title to character. To disable set to `null`.
+    "vsnotes.noteTitleConvertSpaces": "-",
+    // A list of markdown templates to choose from when creating a new note.
+    "vsnotes.templates": [],
+    // Hide the files section in the sidebar. Requires application restart.
+    "vsnotes.treeviewHideFiles": false,
+    // Hide the tags section in the sidebar. Requires application restart.
+    "vsnotes.treeviewHideTags": false,
+
+    // Editor Settings
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+    "editor.wordWrap": "on",
+    "editor.cursorBlinking": "phase",
+    "editor.lineHeight": 22,
+    "editor.formatOnType": true,
+    "editor.tabSize": 4,
+    "eslint.format.enable": true,
+    "editor.detectIndentation": false,
+    "editor.renderLineHighlight": "all",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#3f4d8036",
+        "editorLineNumber.activeForeground": "#2bff00c1"
+    },
+
+    "files.trimTrailingWhitespace": true,
+    "files.insertNewFinalLine": true,
+    "format": "prettier --write \"*_/_.+(js|json)\"",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.guides.bracketPairs": true,
+    "editor.guides.indentation": true,
+
+    "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+    "markdown-preview-enhanced.frontMatterRenderingOption": "code block",
+    "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
+    "markdown-checkboxes.label": true,
+    "markdownShortcuts.icons.citations": true,
+    "markdownShortcuts.icons.link": true,
+
+    // Terminal Settings
+    "terminal.explorerKind": "integrated",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.external.osxExec": "Alacritty.app",
+    "terminal.integrated.fontFamily": "'JetBRainsMono Nerd Font'",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.inheritEnv": true,
+
+    // Google Apps Script compatibility
+    "files.associations": {
+        "*.gs": "javascript"
+    },
+    "workbench.startupEditor": "none",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "html.format.enable": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4
+    },
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "[dockercompose]": {
+        "editor.tabSize": 4
+    },
+    "[yaml]": {
+        "editor.tabSize": 4
+    },
+
+    // Git Settings
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
+
+    // Prettier Settings
+    "prettier.configPath": "",
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "all",
+    "prettier.arrowParens": "always",
+    "prettier.singleQuote": true,
+
+    "editor.stickyScroll.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+
+    // markdownlint settings
+    "markdownlint.ignore": [".gitignore", ".claspignore"],
+    "markdownlint.config": {
+        "list-marker-space": {
+            "ul_multi": 1,
+            "ul_single": 1
+        },
+        "ul-indent": {
+            "indent": 4
+        }
+    },
+
+    // eslint settings
+    "eslint.alwaysShowStatus": true,
+    "gitlens.graph.layout": "editor",
+    "terminal.external.linuxExec": "alacritty",
+    "files.exclude": {
+        "**/.git": false
+    },
+    "lpubsppop01.autoTimeStamp.lineLimit": 15,
+    "gitlens.graph.dimMergeCommits": true,
+    "markdown-preview-enhanced.pandocMarkdownFlavor": "gfm",
+    "markdown.extension.print.theme": "dark",
+    "lpubsppop01.autoTimeStamp.filenamePattern": ".*.md$",
+    "lpubsppop01.autoTimeStamp.luxonFormat": "LLL d, yyyy HH:mm",
+    "lpubsppop01.autoTimeStamp.momentFormat": "LLL d, yyyy HH:mm",
+    "gitlens.graph.minimap.enabled": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.formatOnSave": true,
+    "terminal.integrated.smoothScrolling": true,
+    "cloudcode.project": "google.com:gpor-dissemination-stage",
+    "cloudcode.autoDependencies": "off",
+    "turboConsoleLog.addSemicolonInTheEnd": true,
+    "turboConsoleLog.insertEmptyLineBeforeLogMessage": true,
+    "turboConsoleLog.quote": "'",
+    "gitlens.worktrees.defaultLocation": "/Users/jfairbanks/code/aod.worktrees/",
+    "gitlens.views.worktrees.files.layout": "list",
+    "css.hover.references": false,
+    "geminicodeassist.project": "google.com:gpor-dissemination-stage",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1"
+}

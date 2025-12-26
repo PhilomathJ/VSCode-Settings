@@ -1,0 +1,212 @@
+// Base VS Code profile settings - minimal and grouped
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  // -------------------------------
+  // Editor: general and behavior
+  // -------------------------------
+  "editor.fontSize": 13,
+  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 22,
+  "editor.cursorBlinking": "phase",
+  "editor.renderLineHighlight": "all",
+  "editor.stickyScroll.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "editor.allowVariableLineHeights": false,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": true,
+  "editor.wordWrapColumn": 72,
+  "editor.rulers": [120],
+  "editor.autoIndent": "advanced",
+
+  // -------------------------------
+  // Explorer
+  // -------------------------------
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // -------------------------------
+  // Files & whitespace
+  // -------------------------------
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true, // FIXED: was insertNewFinalLine (typo)
+  "files.exclude": {
+    "**/.git": false
+  },
+
+  // -------------------------------
+  // Window
+  // -------------------------------
+  "window.newWindowProfile": "Default",
+  "window.zoomLevel": 1,
+
+  // -------------------------------
+  // Formatting / Prettier
+  // -------------------------------
+  "prettier.configPath": "",
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all",
+  "prettier.arrowParens": "always",
+  "prettier.singleQuote": true,
+  // Note: If you keep format-on-save, ensure Prettier extension is enabled in this profile.
+
+  // -------------------------------
+  // Language-specific overrides
+  // -------------------------------
+  "[git-commit]": {
+    "editor.rulers": [50, 72],
+    "editor.wordWrap": "wordWrapColumn",
+    "workbench.editor.restoreViewState": false
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": false
+  },
+
+  // -------------------------------
+  // YAML specific settings
+  // -------------------------------
+  "yaml.format.printWidth": 120,
+  "yaml.format.singleQuote": true,
+
+  // -------------------------------
+  // Workbench / UI
+  // -------------------------------
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Material Dark",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#3f4d8036",
+    "editorLineNumber.activeForeground": "#2bff00c1"
+  },
+  "workbench.panel.defaultLocation": "right",
+
+  // -------------------------------
+  // Terminal
+  // -------------------------------
+  // Prefer platform-specific terminal settings - keep OS-specific keys if you use them cross-platform.
+  "terminal.explorerKind": "integrated",
+  "terminal.integrated.fontFamily": "'JetBBrainsMono Nerd Font'",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.enableImages": true,
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.inheritEnv": true,
+  "terminal.integrated.smoothScrolling": true,
+  // macOS keys retained for cross-platform usage (no-op on Linux)
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.external.osxExec": "Alacritty.app",
+
+  // -------------------------------
+  // Git & SCM
+  // -------------------------------
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.codeLens": true,
+
+  // -------------------------------
+  // Extensions: concise extension-specific settings
+  // Move extension-specific keys to your profile for the extension if you prefer.
+  // -------------------------------
+
+  // ESLint (extension)
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+
+  // GitHub Copilot (extension)
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+
+  // GitLens (extension)
+  "gitlens.graph.layout": "editor",
+  "gitlens.graph.dimMergeCommits": true,
+  "gitlens.graph.minimap.enabled": false,
+  "gitlens.worktrees.defaultLocation": "/Users/jfairbanks/code",
+  "gitlens.views.worktrees.files.layout": "list",
+  "gitlens.views.worktrees.pullRequests.enabled": false,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+
+  // Markdown / preview / shortcuts (extensions)
+  "markdownlint.ignore": [".gitignore", ".claspignore"],
+  "markdownlint.config": {
+    "list-marker-space": {
+      "ul_multi": 1,
+      "ul_single": 1
+    },
+    "ul-indent": {
+      "indent": 4
+    }
+  },
+
+  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+  "markdown-preview-enhanced.frontMatterRenderingOption": "code block",
+  "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
+  "markdown-preview-enhanced.pandocMarkdownFlavor": "gfm",
+
+  "markdown-checkboxes.label": true,
+
+  "markdownShortcuts.icons.citations": true,
+  "markdownShortcuts.icons.link": true,
+  "markdown.extension.print.theme": "dark",
+
+  // Gemini Code Assist (or similar) - extension-specific
+  "geminicodeassist.agentTools": ["shell", "read_file", "write_file", "git"],
+  "geminicodeassist.contextExclusionGitignore": false,
+  "geminicodeassist.updateChannel": "Insiders",
+  "geminicodeassist.displayInlineContextHint": false,
+  "geminicodeassist.rules": "",
+
+  // Chat / agent features (extension)
+  "chat.agent.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "docker run": true,
+    "mkdir": true,
+    "cp": true,
+    "awk": true,
+    "print": true,
+    "pnpm": true,
+    "npx": true,
+    "docker compose": true,
+    "docker ps": true,
+    "docker logs": true,
+    "docker restart": true,
+    "curl": true,
+    "journalctl": true,
+    "git checkout": true,
+    "git cherry-pick": true,
+    "gcloud": true,
+    "diff": true,
+    "lsof": true,
+    "tee": true
+  }
+}
