@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script location: /home/jeremy/code/vscode-settings/scripts/sync-profiles.sh
+# This script location: ~/code/vscode-settings/scripts/sync-profiles.sh
 
 # Paths
 VSCODE_DIR="$HOME/.config/Code/User/profiles"
@@ -10,11 +10,11 @@ STORAGE_FILE="$HOME/.config/Code/User/globalStorage/storage.json"
 
 #0.5 Check if the repository dir and storage.json exists
 if [ ! -d "$PROFILES_DIR" ]; then
-  echo "Error: Repo profiles directory $PROFILES_DIR not found!"
+  echo "Error: Repo profiles directory $PROFILES_DIR not found!" >$2
   exit 1
 fi
 if [ ! -f "$STORAGE_FILE" ]; then
-  echo "Error: $STORAGE_FILE not found!"
+  echo "Error: $STORAGE_FILE not found!" >$2
   exit 1
 fi
 # 1. Parse storage.json to get the list of profile Name -> ID mappings
