@@ -160,7 +160,7 @@
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.external.osxExec": "Alacritty.app",
-    "terminal.integrated.fontFamily": "'JetBRainsMono Nerd Font'",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.enableImages": true,
     "terminal.integrated.fontSize": 13,

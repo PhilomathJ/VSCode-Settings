@@ -108,7 +108,7 @@
   // -------------------------------
   // Prefer platform-specific terminal settings - keep OS-specific keys if you use them cross-platform.
   "terminal.explorerKind": "integrated",
-  "terminal.integrated.fontFamily": "'JetBBrainsMono Nerd Font'",
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.enableImages": true,
   "terminal.integrated.fontSize": 13,
