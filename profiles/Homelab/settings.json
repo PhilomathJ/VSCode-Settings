@@ -220,7 +220,10 @@
     "gcloud": true,
     "diff": true,
     "lsof": true,
-    "tee": true
+    "tee": true,
+    "git remote": true,
+    "git fetch": true
   },
-  "geminicodeassist.project": "reflecting-winter-qln82"
+  "geminicodeassist.project": "reflecting-winter-qln82",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
 }
